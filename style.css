@@ -292,53 +292,45 @@ p {
 .intro {
   position: relative;
 
-  min-height: 620px;
+  min-height: 640px;
 
   display: flex;
   align-items: center;
 
-  padding: 90px 0;
+  padding: 80px 0;
 
   background: #003b73;
 }
-
-
-/* Hero layout */
 
 .hero-layout {
   position: relative;
 
   width: 100%;
-  min-height: 440px;
-
-  display: grid;
-
-  grid-template-columns:
-    0.35fr 0.65fr;
-
-  align-items: center;
+  min-height: 480px;
 }
 
 
-/* Main text area */
+/* =========================================================
+   HERO TEXT
+========================================================= */
 
 .hero-copy {
-  grid-column: 2;
+  position: absolute;
 
-  max-width: 760px;
+  left: 36%;
+  top: 50%;
 
-  padding-right: 80px;
+  transform: translateY(-50%);
+
+  width: min(760px, 58%);
 }
-
-
-/* Small overline */
 
 .hero-overline {
   margin: 0 0 18px;
 
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.72);
 
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 700;
 
   letter-spacing: 0.16em;
@@ -346,11 +338,8 @@ p {
   text-transform: uppercase;
 }
 
-
-/* TextileMap title */
-
 .hero-title {
-  margin: 0 0 22px;
+  margin: 0 0 24px;
 
   font-family:
     Arial,
@@ -359,60 +348,53 @@ p {
 
   font-size:
     clamp(
-      4.5rem,
-      8vw,
-      7rem
+      4.3rem,
+      7vw,
+      6.5rem
     );
 
   font-weight: 800;
 
-  line-height: 0.95;
+  line-height: 0.92;
 
-  letter-spacing: -0.055em;
+  letter-spacing: -0.05em;
 
   color: #ffdb00;
 }
-
-
-/* Course */
 
 .hero-course {
   margin: 0 0 34px;
 
   color: #ffffff;
 
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 0.96rem;
+  font-weight: 600;
 
-  line-height: 1.6;
+  line-height: 1.5;
 }
-
-
-/* Description */
 
 .intro-text {
   max-width: 680px;
 
   margin: 0;
 
-  color:
-    rgba(255,255,255,0.84);
+  color: rgba(255, 255, 255, 0.84);
 
-  font-size: 1.08rem;
+  font-size: 1rem;
 
   line-height: 1.8;
 }
 
 
 /* =========================================================
-   CHALMERS LOGO — TOP RIGHT
+   CHALMERS LOGO — BOTTOM RIGHT
 ========================================================= */
 
 .hero-logo-corner {
   position: absolute;
 
-  top: 0;
   right: 0;
+  bottom: 0;
 }
 
 .chalmers-logo-placeholder {
@@ -421,26 +403,23 @@ p {
   align-items: center;
   justify-content: center;
 
-  min-width: 160px;
-  min-height: 70px;
+  min-width: 155px;
+  min-height: 62px;
 
   padding: 12px 18px;
 
-  border:
-    1px solid
-    rgba(255,255,255,0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 
-  border-radius: 8px;
+  border-radius: 6px;
 
-  color: #ffffff;
+  background: transparent;
 
-  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 0.66rem;
   font-weight: 700;
 
   letter-spacing: 0.08em;
-
-  background:
-    rgba(255,255,255,0.04);
 }
 
 
@@ -448,15 +427,12 @@ p {
    TABLET
 ========================================================= */
 
-@media (max-width: 960px) {
-
-  .hero-layout {
-    grid-template-columns:
-      0.15fr 0.85fr;
-  }
+@media (max-width: 1000px) {
 
   .hero-copy {
-    padding-right: 20px;
+    left: 25%;
+
+    width: 68%;
   }
 
 }
@@ -466,37 +442,40 @@ p {
    MOBILE
 ========================================================= */
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
 
   .intro {
     min-height: auto;
 
-    padding:
-      85px 0
-      70px;
+    padding: 85px 0 70px;
   }
 
   .hero-layout {
-    display: block;
-
     min-height: auto;
   }
 
   .hero-copy {
-    padding-right: 0;
+    position: static;
+
+    width: 100%;
+
+    transform: none;
   }
 
   .hero-logo-corner {
     position: static;
 
-    margin-bottom: 34px;
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: flex-end;
   }
 
   .hero-title {
     font-size:
       clamp(
-        4rem,
-        19vw,
+        3.8rem,
+        17vw,
         5rem
       );
   }
