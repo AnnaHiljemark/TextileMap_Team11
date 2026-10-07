@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="TextileMap – Team 11 Capstone Project at Chalmers University of Technology."
+  />
+  <title>TextileMap | Team 11</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">TextileMap <span>Team 11</span></a>
+
+      <button class="menu-button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+
+      <nav class="main-nav">
+        <a href="#overview">Overview</a>
+        <a href="#research">Research</a>
+        <a href="#prototype">Prototype</a>
+        <a href="#design-thinking">Design Thinking</a>
+        <a href="#sustainability">Sustainability</a>
+        <a href="#team">Team</a>
+        <a href="#references">References</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- INTRO -->
+    <section class="intro">
+      <div class="container intro-grid">
+        <div>
+          <p class="overline">CAPSTONE PROJECT · TEAM 11</p>
+          <h1>TextileMap</h1>
+          <p class="intro-text">
+            TextileMap is an early-stage software concept that explores how textile supply-chain
+            information could be presented in a clearer and more comparable way for material
+            sourcing employees at IKEA.
+          </p>
+        </div>
+
+        <div class="project-summary">
+          <div>
+            <span>Project focus</span>
+            <strong>Textile supply chains</strong>
+          </div>
+          <div>
+            <span>Primary users</span>
+            <strong>Material sourcing employees</strong>
+          </div>
+          <div>
+            <span>Current phase</span>
+            <strong>Research & early prototyping</strong>
+          </div>
+          <div>
+            <span>Team</span>
+            <strong>Team 11</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="section" id="overview">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-index">01</span>
+          <div>
+            <p class="overline">INNOVATION OVERVIEW</p>
+            <h2>Problem and concept</h2>
+          </div>
+        </div>
+
+        <div class="two-column-text">
+          <article>
+            <h3>The challenge</h3>
+            <p>
+              Textile sourcing involves many suppliers, materials, production processes and
+              sustainability factors. Relevant information may be distributed across several
+              reports, systems and data sources, which makes it difficult to create a clear
+              overview and compare alternatives.
+            </p>
+            <p>
+              This becomes particularly important when sourcing decisions need to consider
+              environmental indicators such as emissions and water usage together with operational
+              and supplier-related information.
+            </p>
+          </article>
+
+          <article>
+            <h3>The concept</h3>
+            <p>
+              TextileMap is a dashboard concept that brings selected supply-chain information
+              together in one interface. The intention is to support sourcing employees by making
+              important information easier to access, compare and investigate.
+            </p>
+            <p>
+              The system is intended as a decision-support tool. It should not replace professional
+              judgement, and the reliability and comparability of the underlying data remain central
+              concerns.
+            </p>
+          </article>
+        </div>
+
+        <div class="info-table">
+          <div class="info-row">
+            <span>Target users</span>
+            <p>Employees working with material sourcing.</p>
+          </div>
+          <div class="info-row">
+            <span>Main need</span>
+            <p>A clearer overview of complex supplier, material and sustainability information.</p>
+          </div>
+          <div class="info-row">
+            <span>Possible indicators</span>
+            <p>CO₂ emissions, water usage, renewable energy, labor score, certifications and supply risk.</p>
+          </div>
+          <div class="info-row">
+            <span>Expected value</span>
+            <p>More accessible information that can support informed and potentially more sustainable sourcing decisions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="section section-muted" id="research">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-index">02</span>
+          <div>
+            <p class="overline">USER RESEARCH</p>
+            <h2>How the concept has been shaped so far</h2>
+          </div>
+        </div>
+
+        <div class="research-layout">
+          <div class="research-main">
+            <h3>Interviews</h3>
+            <p>
+              We have interviewed people with experience in sourcing and supply chains. The
+              interviews provided insight into how difficult it can be to maintain an overview
+              when decisions depend on information from multiple parts of a supply chain.
+            </p>
+
+            <h3>Desk research</h3>
+            <p>
+              We have also reviewed IKEA sustainability material and sustainability strategy
+              documents to better understand the organizational context and the types of
+              sustainability concerns that may be relevant to the concept.
+            </p>
+
+            <h3>Planned evaluation</h3>
+            <p>
+              In later stages, the plan is to let potential users interact with the prototype
+              and provide feedback using a think-aloud approach. This can help identify unclear
+              information, missing functionality and usability problems.
+            </p>
+          </div>
+
+          <aside class="research-aside">
+            <h3>Questions guiding the work</h3>
+            <ul>
+              <li>Which information is most useful when comparing suppliers?</li>
+              <li>How much detail should be visible at first glance?</li>
+              <li>How should uncertainty and data quality be communicated?</li>
+              <li>Which sustainability indicators are meaningful and comparable?</li>
+              <li>How can the interface support rather than replace user judgement?</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROTOTYPE -->
+    <section class="section" id="prototype">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-index">03</span>
+          <div>
+            <p class="overline">EARLY PROTOTYPE</p>
+            <h2>Current prototype functionality</h2>
+          </div>
+        </div>
+
+        <p class="section-lead">
+          The current prototype explores how geographically distributed suppliers and
+          sustainability-related information could be combined in one interface. It is a concept
+          prototype, and the data shown in the prototype should be treated as illustrative rather
+          than verified IKEA supplier data.
+        </p>
+
+        <div class="prototype-window">
+          <div class="prototype-topbar">
+            <div class="window-dots"><span></span><span></span><span></span></div>
+            <span>TextileMap Prototype</span>
+            <span class="prototype-label">EARLY CONCEPT</span>
+          </div>
+
+          <div class="prototype-content">
+            <aside class="prototype-sidebar">
+              <div class="prototype-logo">TM</div>
+              <button class="prototype-nav active">Supply map</button>
+              <button class="prototype-nav">Suppliers</button>
+              <button class="prototype-nav">Materials</button>
+              <button class="prototype-nav">Compare</button>
+            </aside>
+
+            <div class="prototype-main">
+              <div class="prototype-heading">
+                <div>
+                  <small>SUPPLY CHAIN OVERVIEW</small>
+                  <h3>Global textile supplier network</h3>
+                </div>
+                <div class="prototype-filter">All suppliers ▾</div>
+              </div>
+
+              <div class="prototype-grid">
+                <div class="map-demo">
+                  <div class="map-grid-lines"></div>
+
+                  <div class="continent continent-na"></div>
+                  <div class="continent continent-sa"></div>
+                  <div class="continent continent-eu"></div>
+                  <div class="continent continent-af"></div>
+                  <div class="continent continent-as"></div>
+                  <div class="continent continent-au"></div>
+
+                  <div class="map-marker marker-india">
+                    <span>74</span>
+                    <div class="marker-label">India</div>
+                  </div>
+                  <div class="map-marker marker-turkey">
+                    <span>82</span>
+                    <div class="marker-label">Turkey</div>
+                  </div>
+                  <div class="map-marker marker-china">
+                    <span>68</span>
+                    <div class="marker-label">China</div>
+                  </div>
+                  <div class="map-marker marker-vietnam">
+                    <span>66</span>
+                    <div class="marker-label">Vietnam</div>
+                  </div>
+                  <div class="map-marker marker-netherlands">
+                    <span>89</span>
+                    <div class="marker-label">Netherlands</div>
+                  </div>
+                </div>
+
+                <div class="supplier-demo">
+                  <div class="supplier-score">
+                    <div>
+                      <small>SELECTED SUPPLIER</small>
+                      <strong>İzmir Organic Textile A.Ş.</strong>
+                      <span>Turkey</span>
+                    </div>
+                    <div class="score-circle">82</div>
+                  </div>
+
+                  <div class="metric-list">
+                    <div><span>CO₂ emissions</span><strong>18,900 t/yr</strong></div>
+                    <div><span>Water usage</span><strong>94 ML/yr</strong></div>
+                    <div><span>Renewable energy</span><strong>55%</strong></div>
+                    <div><span>Labor score</span><strong>88/100</strong></div>
+                  </div>
+
+                  <div class="demo-tabs">
+                    <span class="active">Overview</span>
+                    <span>Materials</span>
+                    <span>Process</span>
+                    <span>Roadmap</span>
+                  </div>
+
+                  <p class="demo-note">
+                    The prototype lets a user move from a high-level geographic overview to
+                    supplier-specific information and more detailed process data.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-list">
+          <div class="feature-row">
+            <span>01</span>
+            <div>
+              <h3>Geographical overview</h3>
+              <p>
+                Suppliers are positioned on a global map so that the user can understand where
+                different parts of the textile network are located.
+              </p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <span>02</span>
+            <div>
+              <h3>Supplier sustainability metrics</h3>
+              <p>
+                The prototype presents indicators such as sustainability score, CO₂ emissions,
+                water usage, renewable energy and labor-related measures.
+              </p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <span>03</span>
+            <div>
+              <h3>Detailed supplier view</h3>
+              <p>
+                Users can inspect supplier details including materials, manufacturing processes,
+                certifications, challenges and possible improvement actions.
+              </p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <span>04</span>
+            <div>
+              <h3>Comparison as decision support</h3>
+              <p>
+                The long-term intention is to make it easier to compare alternatives without
+                reducing a complex sourcing decision to a single score.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="prototype-warning">
+          <strong>Prototype data</strong>
+          <p>
+            The current supplier names, values and descriptions are used for interface exploration.
+            They should not be interpreted as verified information about IKEA’s actual supplier network.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESIGN THINKING -->
+    <section class="section section-dark" id="design-thinking">
+      <div class="container">
+        <div class="section-header light">
+          <span class="section-index">04</span>
+          <div>
+            <p class="overline">DESIGN THINKING PERSPECTIVE</p>
+            <h2>Usability, feasibility and viability</h2>
+          </div>
+        </div>
+
+        <div class="dt-grid">
+          <article>
+            <span class="dt-label">USABILITY</span>
+            <h3>User value</h3>
+            <p>
+              The interface is intended for material sourcing employees who need to understand
+              and compare complex information. A simple overview should be available first, with
+              the option to investigate details when needed.
+            </p>
+          </article>
+
+          <article>
+            <span class="dt-label">FEASIBILITY</span>
+            <h3>Technical realization</h3>
+            <p>
+              A real implementation would depend on access to reliable supplier information,
+              emissions and water data, geographical information and integration with relevant
+              IKEA systems or data sources.
+            </p>
+          </article>
+
+          <article>
+            <span class="dt-label">VIABILITY</span>
+            <h3>Business alignment</h3>
+            <p>
+              The concept could support sourcing work by making sustainability information more
+              accessible during decisions. Its usefulness depends on whether it fits existing
+              workflows and whether the data can be trusted and maintained.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUSTAINABILITY -->
+    <section class="section" id="sustainability">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-index">05</span>
+          <div>
+            <p class="overline">SUSTAINABLE SOFTWARE REQUIREMENTS</p>
+            <h2>Sustainability dimensions</h2>
+          </div>
+        </div>
+
+        <p class="section-lead">
+          The Sustainable Requirements Framework is used to consider both positive and negative
+          effects of the concept. The analysis includes immediate effects of the software,
+          behaviors it may enable, and broader structural effects that may develop over time.
+        </p>
+
+        <div class="sustainability-table">
+          <article>
+            <h3>Individual</h3>
+            <p>
+              Easier access to information can support learning and user agency. However, users
+              may lose autonomy if the dashboard is treated as an authority rather than as
+              decision support.
+            </p>
+            <span>Agency · learning · privacy</span>
+          </article>
+
+          <article>
+            <h3>Social</h3>
+            <p>
+              A common information base may improve collaboration and transparency. Trust can be
+              weakened if data is incomplete, misleading or presented without sufficient context.
+            </p>
+            <span>Trust · collaboration · participation</span>
+          </article>
+
+          <article>
+            <h3>Environmental</h3>
+            <p>
+              The concept may support sourcing choices with lower environmental impact by making
+              relevant indicators visible. The digital system itself also requires storage,
+              computing resources and hardware.
+            </p>
+            <span>Resources · emissions · water · logistics</span>
+          </article>
+
+          <article>
+            <h3>Economic</h3>
+            <p>
+              Better access to decision-relevant data may create value, while development,
+              integration, maintenance and data-quality work generate ongoing costs.
+            </p>
+            <span>Value · supply chains · governance</span>
+          </article>
+
+          <article>
+            <h3>Technical</h3>
+            <p>
+              The system needs to remain maintainable, secure and adaptable as suppliers,
+              materials, data sources and sustainability requirements change.
+            </p>
+            <span>Maintainability · adaptability · scalability</span>
+          </article>
+        </div>
+
+        <div class="effects-block">
+          <h3>Example chain of effects</h3>
+          <div class="effects">
+            <div>
+              <span>Immediate</span>
+              <p>Supply-chain and sustainability information is brought into one interface.</p>
+            </div>
+            <div class="arrow">→</div>
+            <div>
+              <span>Enabling</span>
+              <p>Sourcing employees can compare suppliers and materials more efficiently.</p>
+            </div>
+            <div class="arrow">→</div>
+            <div>
+              <span>Structural</span>
+              <p>Decision patterns may increasingly favor suppliers with stronger sustainability performance.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="diagram-grid">
+          <div class="diagram-box">
+            <span>PLACEHOLDER FOR TEAM DIAGRAM</span>
+            <h3>Sustainability Awareness Diagram</h3>
+            <p>Add your final course diagram here.</p>
+          </div>
+          <div class="diagram-box">
+            <span>PLACEHOLDER FOR TEAM DIAGRAM</span>
+            <h3>Likelihood × Sustainability Impact</h3>
+            <p>Add your likelihood/impact diagram here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RISKS -->
+    <section class="section section-muted">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-index">06</span>
+          <div>
+            <p class="overline">RISKS & LIMITATIONS</p>
+            <h2>Important limitations at this stage</h2>
+          </div>
+        </div>
+
+        <div class="risk-list">
+          <article>
+            <h3>Data quality</h3>
+            <p>
+              Supplier data may differ in accuracy, age, scope and measurement method. Poor
+              comparability could result in misleading conclusions.
+            </p>
+          </article>
+          <article>
+            <h3>Transparency</h3>
+            <p>
+              The interface needs to communicate uncertainty and data provenance instead of
+              presenting every value as equally reliable.
+            </p>
+          </article>
+          <article>
+            <h3>User over-reliance</h3>
+            <p>
+              A dashboard can simplify complex decisions too much. The concept should support
+              professional judgement rather than automate it away.
+            </p>
+          </article>
+          <article>
+            <h3>Maintenance</h3>
+            <p>
+              Supplier information, environmental indicators, regulations and risk conditions
+              change over time and need continuous updating.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="section" id="team">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-index">07</span>
+          <div>
+            <p class="overline">TEAM INFORMATION</p>
+            <h2>Team 11</h2>
+          </div>
+        </div>
+
+        <div class="team-list">
+          <div><strong>Anna</strong><span>Team member</span></div>
+          <div><strong>Elliot</strong><span>Team member</span></div>
+          <div><strong>Elias</strong><span>Team member</span></div>
+          <div><strong>Melvin</strong><span>Team member</span></div>
+        </div>
+
+        <div class="course-info">
+          <div class="chalmers-placeholder">
+            <strong>CHALMERS</strong>
+            <span>University of Technology</span>
+          </div>
+
+          <div>
+            <span>Course</span>
+            <strong>Capstone Project</strong>
+            <p>Add exact course title and course code here.</p>
+          </div>
+
+          <div>
+            <span>Contact</span>
+            <strong>Team representative</strong>
+            <p>Add one or two contact email addresses here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REFERENCES -->
+    <section class="section section-dark" id="references">
+      <div class="container">
+        <div class="section-header light">
+          <span class="section-index">08</span>
+          <div>
+            <p class="overline">SOURCES & REFERENCES</p>
+            <h2>Materials consulted so far</h2>
+          </div>
+        </div>
+
+        <div class="references">
+          <div>
+            <span>01</span>
+            <div>
+              <strong>IKEA sustainability reports</strong>
+              <p>Background material on sustainability priorities and reporting.</p>
+            </div>
+          </div>
+          <div>
+            <span>02</span>
+            <div>
+              <strong>IKEA sustainability strategy 2025–2030</strong>
+              <p>Used to understand the wider sustainability context of the concept.</p>
+            </div>
+          </div>
+          <div>
+            <span>03</span>
+            <div>
+              <strong>Interview research</strong>
+              <p>Interviews with people with experience in sourcing and supply chains.</p>
+            </div>
+          </div>
+          <div>
+            <span>04</span>
+            <div>
+              <strong>Sustainable Requirements Framework</strong>
+              <p>Course material used for sustainability analysis.</p>
+            </div>
+          </div>
+          <div>
+            <span>05</span>
+            <div>
+              <strong>Additional academic and technical sources</strong>
+              <p>Add complete references as the project develops.</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="reference-footnote">
+          Before final submission, replace these summaries with complete references including
+          author/organization, title, year and URL/DOI where applicable.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <strong>TextileMap · Team 11</strong>
+      <span>Chalmers University of Technology · 2026</span>
+    </div>
+  </footer>
+</body>
+</html>
