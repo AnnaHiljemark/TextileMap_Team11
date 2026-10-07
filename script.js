@@ -1,40 +1,46 @@
-const menuButton = document.querySelector(".menu-button");
-const nav = document.querySelector(".main-nav");
-const navLinks = document.querySelectorAll(".main-nav a");
-const sections = document.querySelectorAll("section[id]");
+document.addEventListener("DOMContentLoaded", () => {
+  const menuButton = document.querySelector(".menu-button");
+  const nav = document.querySelector(".main-nav");
 
-menuButton.addEventListener("click", () => {
-  const open = nav.classList.toggle("open");
-  menuButton.setAttribute("aria-expanded", String(open));
-});
-
-navLinks.forEach(link => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("open");
-    menuButton.setAttribute("aria-expanded", "false");
-  });
-});
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-
-    navLinks.forEach(link => {
-      link.classList.toggle(
-        "active",
-        link.getAttribute("href") === `#${entry.target.id}`
-      );
+  if (menuButton && nav) {
+    menuButton.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(isOpen));
     });
-  });
-}, {
-  rootMargin: "-30% 0px -60% 0px"
-});
 
-sections.forEach(section => observer.observe(section));
+    nav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
 
-document.querySelectorAll(".prototype-nav").forEach(button => {
-  button.addEventListener("click", () => {
-    document.querySelectorAll(".prototype-nav").forEach(item => item.classList.remove("active"));
-    button.classList.add("active");
+  const tabButtons = document.querySelectorAll(".tab-button");
+  const tabPanels = document.querySelectorAll(".tab-panel");
+
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const targetId = button.dataset.tab;
+
+      tabButtons.forEach((btn) => {
+        btn.classList.remove("active");
+        btn.setAttribute("aria-selected", "false");
+      });
+
+      tabPanels.forEach((panel) => {
+        panel.classList.remove("active");
+        panel.hidden = true;
+      });
+
+      button.classList.add("active");
+      button.setAttribute("aria-selected", "true");
+
+      const targetPanel = document.getElementById(targetId);
+      if (targetPanel) {
+        targetPanel.classList.add("active");
+        targetPanel.hidden = false;
+      }
+    });
   });
 });

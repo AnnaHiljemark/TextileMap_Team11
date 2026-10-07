@@ -2,48 +2,46 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
 
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
-  >
+  />
 
   <meta
     name="description"
     content="TextileMap – Team 11 Capstone Project at Chalmers University of Technology."
-  >
+  />
 
   <title>TextileMap | Team 11</title>
 
   <link
     rel="preconnect"
     href="https://fonts.googleapis.com"
-  >
+  />
 
   <link
     rel="preconnect"
     href="https://fonts.gstatic.com"
     crossorigin
-  >
+  />
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
     rel="stylesheet"
-  >
+  />
 
   <link
     rel="stylesheet"
     href="style.css"
-  >
+  />
 
   <script
     src="script.js"
     defer
   ></script>
-
 </head>
-
 
 <body>
 
@@ -62,7 +60,6 @@
         TEXTILE MAP
       </a>
 
-
       <button
         class="menu-button"
         aria-label="Open navigation"
@@ -70,38 +67,17 @@
       >
         <span></span>
         <span></span>
+        <span></span>
       </button>
-
 
       <nav class="main-nav">
 
-        <a href="#about">
-          About
-        </a>
-
-        <a href="#prototype">
-          Prototype
-        </a>
-
-        <a href="#impact">
-          Impact
-        </a>
-
-        <a href="#feasibility">
-          Feasibility
-        </a>
-
-        <a href="#validation">
-          Validation
-        </a>
-
-        <a href="#team">
-          Team
-        </a>
-
-        <a href="#references">
-          References
-        </a>
+        <a href="#about">About</a>
+        <a href="#prototype">Prototype</a>
+        <a href="#feasibility">Feasibility</a>
+        <a href="#validation">Validation</a>
+        <a href="#team">Team</a>
+        <a href="#references">References</a>
 
       </nav>
 
@@ -113,49 +89,179 @@
 
   <main id="top">
 
-
     <!-- =====================================================
          HERO
     ====================================================== -->
 
-   <section class="intro">
+    <section class="hero">
 
-  <div class="container hero-layout">
+      <div class="container hero-grid">
 
-    <div class="hero-copy">
+        <div class="hero-copy">
 
-      <p class="hero-overline">
-        CAPSTONE PROJECT · TEAM 11
-      </p>
+          <p class="hero-overline">
+            CAPSTONE PROJECT · TEAM 11
+          </p>
 
-      <h1 class="hero-title">
-        TextileMap
-      </h1>
+          <h1 class="hero-title">
+            TextileMap
+          </h1>
 
-      <p class="hero-course">
-        TEK830 Sustainable Digitalization in Practice
-      </p>
+          <p class="hero-course">
+            TEK830 Sustainable Digitalization in Practice
+          </p>
 
-      <p class="intro-text">
-        A dashboard concept that brings textile supply-chain,
-        supplier and sustainability information together in
-        one clear and accessible place.
-      </p>
+          <p class="hero-text">
+            A dashboard concept that brings textile supply-chain,
+            supplier and sustainability information together in one
+            clear and accessible place.
+          </p>
 
-    </div>
+        </div>
 
 
-    <div class="hero-logo-corner">
+        <div class="hero-logo-wrap">
 
-      <div class="chalmers-logo-placeholder">
-        CHALMERS LOGO
+          <div class="hero-logo-card">
+
+            <img
+              src="assets/chalmers-logo.png"
+              alt="Chalmers University of Technology"
+              class="hero-logo-image"
+            />
+
+          </div>
+
+        </div>
+
       </div>
 
-    </div>
+    </section>
 
-  </div>
 
-</section>
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section
+      class="section"
+      id="about"
+    >
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <span class="section-index">
+            01
+          </span>
+
+          <div>
+
+            <p class="section-kicker">
+              ABOUT THE PROJECT
+            </p>
+
+            <h2>
+              Why TextileMap?
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="two-column">
+
+          <article class="text-card text-card-accent">
+
+            <h3>
+              The problem
+            </h3>
+
+            <p>
+              IKEA has a large and complex textile supply chain
+              involving many suppliers, materials and sustainability
+              factors.
+            </p>
+
+            <p>
+              Relevant information is often spread across different
+              reports and systems, making it difficult for sourcing
+              managers to gain a clear overview and compare different
+              options.
+            </p>
+
+          </article>
+
+
+          <article class="text-card">
+
+            <h3>
+              The solution
+            </h3>
+
+            <p>
+              TextileMap is a dashboard that gathers information about
+              textiles, suppliers and sustainability in one visual and
+              structured interface.
+            </p>
+
+            <p>
+              The goal is to make information easier to find, easier
+              to understand and easier to use when making sourcing
+              decisions.
+            </p>
+
+          </article>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+          <article class="feature-card">
+            <span class="feature-number">01</span>
+            <h3>Supplier information</h3>
+            <p>
+              Supplier location, materials, current challenges and
+              possible improvement areas.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-number">02</span>
+            <h3>Environmental impact</h3>
+            <p>
+              Key indicators such as CO₂ emissions, water usage and
+              renewable material or energy use.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-number">03</span>
+            <h3>Supply-chain processes</h3>
+            <p>
+              Information about what happens at different stages of
+              the textile production chain.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-number">04</span>
+            <h3>Sustainability score</h3>
+            <p>
+              A simple 0–100 score gives an overview while more
+              detailed information remains available when needed.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
 
 
 
@@ -164,23 +270,21 @@
     ====================================================== -->
 
     <section
-      class="section"
+      class="section section-soft"
       id="prototype"
     >
 
       <div class="container">
 
-
         <div class="section-header">
 
           <span class="section-index">
-            03
+            02
           </span>
-
 
           <div>
 
-            <p class="overline">
+            <p class="section-kicker">
               INTERACTIVE PROTOTYPE
             </p>
 
@@ -193,73 +297,55 @@
         </div>
 
 
-
         <p class="section-lead">
-
           The prototype demonstrates how supplier information,
-          sustainability metrics and supply-chain processes can
-          be presented and compared within one interface.
-
+          sustainability metrics and supply-chain processes can be
+          presented and compared within one interface.
         </p>
 
 
+        <div class="prototype-shell">
 
-        <div class="prototype-embed-wrapper">
+          <div class="prototype-topbar">
 
-
-          <div class="prototype-browser-bar">
-
-
-            <div class="prototype-browser-dots">
-
+            <div class="prototype-dots">
               <span></span>
               <span></span>
               <span></span>
-
             </div>
 
-
-            <div class="prototype-browser-title">
+            <div class="prototype-title">
               TextileMap Prototype
             </div>
 
-
-            <div class="prototype-browser-status">
+            <div class="prototype-status">
               Interactive
             </div>
 
-
           </div>
 
-
-
           <iframe
-            class="prototype-iframe"
+            class="prototype-frame"
             src="prototype/index.html"
             title="Interactive TextileMap prototype"
           >
           </iframe>
 
-
         </div>
 
 
-
-        <div class="prototype-open">
+        <div class="prototype-footer">
 
           <p>
-
-            Interact with the prototype directly above or open
-            it separately for a larger view.
-
+            Interact with the prototype above or open it separately
+            for a larger view.
           </p>
-
 
           <a
             href="prototype/index.html"
             target="_blank"
             rel="noopener noreferrer"
-            class="prototype-open-button"
+            class="button-outline"
           >
             Open prototype
           </a>
@@ -267,22 +353,13 @@
         </div>
 
 
-
-        <div class="prototype-warning">
-
-          <strong>
-            Prototype data
-          </strong>
-
+        <div class="note-card">
+          <strong>Prototype data</strong>
           <p>
-
             TextileMap currently uses mock data to test functionality,
             information structure and supplier comparisons.
-
           </p>
-
         </div>
-
 
       </div>
 
@@ -291,302 +368,30 @@
 
 
     <!-- =====================================================
-         IMPACT
+         FEASIBILITY + SUSTAINABILITY TABS
     ====================================================== -->
 
     <section
-      class="section section-dark"
-      id="impact"
+      class="section"
+      id="feasibility"
     >
 
       <div class="container">
 
-
-        <div class="section-header light">
-
-          <span class="section-index">
-            04
-          </span>
-
-
-          <div>
-
-            <p class="overline">
-              WHY IT MATTERS
-            </p>
-
-            <h2>
-              Supporting better sourcing decisions
-            </h2>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="dt-grid">
-
-
-          <article>
-
-            <span class="dt-label">
-              EMPLOYEE
-            </span>
-
-
-            <h3>
-              Clearer decision support
-            </h3>
-
-
-            <p>
-
-              TextileMap gives material sourcing employees quick
-              access to supplier, material and sustainability data.
-
-            </p>
-
-
-            <p>
-
-              It simplifies comparisons and increases awareness
-              of environmental impacts while supporting professional
-              judgement rather than replacing it.
-
-            </p>
-
-          </article>
-
-
-
-          <article>
-
-            <span class="dt-label">
-              SOCIAL
-            </span>
-
-
-            <h3>
-              Shared information
-            </h3>
-
-
-            <p>
-
-              TextileMap creates a shared source of information
-              that can improve collaboration and transparency
-              between employees involved in sourcing decisions.
-
-            </p>
-
-          </article>
-
-
-
-          <article>
-
-            <span class="dt-label">
-              ENVIRONMENTAL & BUSINESS
-            </span>
-
-
-            <h3>
-              More informed choices
-            </h3>
-
-
-            <p>
-
-              By making sustainability data easier to compare,
-              TextileMap can help users identify suppliers and
-              materials with lower environmental impact.
-
-            </p>
-
-
-            <p>
-
-              This can support IKEA's wider sustainability goals
-              while also improving the quality of sourcing decisions.
-
-            </p>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-     USABILITY · FEASIBILITY · VIABILITY
-====================================================== -->
-
-<section
-  class="section"
-  id="feasibility"
->
-
-  <div class="container">
-
-
-    <div class="section-header">
-
-      <span class="section-index">
-        05
-      </span>
-
-
-      <div>
-
-        <p class="overline">
-          DESIGN THINKING
-        </p>
-
-        <h2>
-          Usability, feasibility and viability
-        </h2>
-
-      </div>
-
-    </div>
-
-
-
-    <div class="design-thinking-cards">
-
-
-      <!-- USABILITY -->
-
-      <article class="design-thinking-card">
-
-        <span class="design-card-label">
-          USABILITY
-        </span>
-
-        <h3>
-          Designed for sourcing employees
-        </h3>
-
-        <p>
-
-          TextileMap gives material sourcing employees quick access
-          to supplier, material and sustainability information.
-
-        </p>
-
-        <p>
-
-          The dashboard is designed to simplify complex information
-          and make comparisons easier while still supporting
-          professional judgement.
-
-        </p>
-
-      </article>
-
-
-
-      <!-- FEASIBILITY -->
-
-      <article class="design-thinking-card">
-
-        <span class="design-card-label">
-          FEASIBILITY
-        </span>
-
-        <h3>
-          An internal software solution
-        </h3>
-
-        <p>
-
-          TextileMap is designed as internal software for IKEA and
-          could build on information already available within
-          existing internal systems.
-
-        </p>
-
-        <p>
-
-          The main technical challenge is integrating data from
-          different sources and ensuring that it is standardized,
-          reliable and kept up to date.
-
-        </p>
-
-      </article>
-
-
-
-      <!-- VIABILITY -->
-
-      <article class="design-thinking-card">
-
-        <span class="design-card-label">
-          VIABILITY
-        </span>
-
-        <h3>
-          Supporting IKEA's goals
-        </h3>
-
-        <p>
-
-          TextileMap supports sourcing decisions by making relevant
-          sustainability and supply-chain information easier to
-          understand and compare.
-
-        </p>
-
-        <p>
-
-          By improving access to existing information, the solution
-          can support both more informed sourcing decisions and
-          IKEA's wider sustainability and business goals.
-
-        </p>
-
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-    <!-- =====================================================
-         DATA
-    ====================================================== -->
-
-    <section class="section section-muted">
-
-      <div class="container">
-
-
         <div class="section-header">
 
           <span class="section-index">
-            06
+            03
           </span>
-
 
           <div>
 
-            <p class="overline">
-              DATA
+            <p class="section-kicker">
+              DESIGN THINKING & SUSTAINABILITY
             </p>
 
             <h2>
-              Fair comparisons start with trusted data
+              Feasibility and sustainability
             </h2>
 
           </div>
@@ -594,43 +399,159 @@
         </div>
 
 
+        <div class="tabs">
 
-        <div class="two-column-text">
+          <div
+            class="tab-buttons"
+            role="tablist"
+            aria-label="Feasibility and sustainability tabs"
+          >
+            <button
+              class="tab-button active"
+              data-tab="tab-feasibility"
+              role="tab"
+              aria-selected="true"
+              type="button"
+            >
+              Feasibility
+            </button>
+
+            <button
+              class="tab-button"
+              data-tab="tab-sustainability"
+              role="tab"
+              aria-selected="false"
+              type="button"
+            >
+              Sustainability
+            </button>
+          </div>
 
 
-          <article>
 
-            <h3>
-              Current approach
-            </h3>
+          <!-- =========================================
+               TAB 1: FEASIBILITY
+          ========================================== -->
 
-            <p>
+          <div
+            class="tab-panel active"
+            id="tab-feasibility"
+            role="tabpanel"
+          >
 
-              During development, TextileMap uses mock data to
-              test the system, interface and comparison functionality.
+            <div class="tab-card-grid">
 
-            </p>
+              <article class="tab-card">
+                <span class="tab-card-label">USABILITY</span>
+                <h3>Designed for sourcing employees</h3>
+                <p>
+                  TextileMap gives material sourcing employees quick
+                  access to supplier, material and sustainability
+                  information.
+                </p>
+                <p>
+                  The dashboard is designed to simplify complex
+                  information and make comparisons easier while still
+                  supporting professional judgement.
+                </p>
+              </article>
 
-          </article>
+
+              <article class="tab-card">
+                <span class="tab-card-label">FEASIBILITY</span>
+                <h3>An internal software solution</h3>
+                <p>
+                  TextileMap is designed as internal software for IKEA
+                  and could build on information already available
+                  within existing internal systems.
+                </p>
+                <p>
+                  The main technical challenge is integrating data
+                  from different sources and ensuring that it is
+                  standardized, reliable and kept up to date.
+                </p>
+              </article>
+
+
+              <article class="tab-card">
+                <span class="tab-card-label">VIABILITY</span>
+                <h3>Supporting IKEA’s goals</h3>
+                <p>
+                  TextileMap supports sourcing decisions by making
+                  relevant sustainability and supply-chain information
+                  easier to understand and compare.
+                </p>
+                <p>
+                  By improving access to existing information, the
+                  solution can support both more informed sourcing
+                  decisions and IKEA’s wider sustainability and
+                  business goals.
+                </p>
+              </article>
+
+            </div>
+
+          </div>
 
 
 
-          <article>
+          <!-- =========================================
+               TAB 2: SUSTAINABILITY
+          ========================================== -->
 
-            <h3>
-              Standardized metrics
-            </h3>
+          <div
+            class="tab-panel"
+            id="tab-sustainability"
+            role="tabpanel"
+            hidden
+          >
 
-            <p>
+            <div class="sustainability-grid">
 
-              By presenting important metrics such as carbon emissions
-              and water usage consistently, TextileMap aims to make
-              supplier comparisons clearer and easier to understand.
+              <article class="sustainability-card">
+                <span class="tab-card-label">EMPLOYEE</span>
+                <h3>Better decision support</h3>
+                <p>
+                  TextileMap empowers material sourcing by providing
+                  clear and quick access to supplier, material and
+                  sustainability data.
+                </p>
+              </article>
 
-            </p>
+              <article class="sustainability-card">
+                <span class="tab-card-label">SOCIAL</span>
+                <h3>Shared understanding</h3>
+                <p>
+                  A shared source of information can improve
+                  collaboration and transparency between employees
+                  involved in sourcing decisions.
+                </p>
+              </article>
 
-          </article>
+              <article class="sustainability-card">
+                <span class="tab-card-label">ENVIRONMENTAL</span>
+                <h3>More sustainable choices</h3>
+                <p>
+                  By making data such as emissions, water usage and
+                  renewable material content easier to compare,
+                  TextileMap can support lower-impact sourcing
+                  decisions.
+                </p>
+              </article>
 
+              <article class="sustainability-card">
+                <span class="tab-card-label">DATA & TRUST</span>
+                <h3>Fair comparisons need trusted data</h3>
+                <p>
+                  TextileMap currently uses mock data, while the long
+                  term value of the concept depends on reliable,
+                  standardized and transparent metrics.
+                </p>
+              </article>
+
+            </div>
+
+          </div>
 
         </div>
 
@@ -645,23 +566,21 @@
     ====================================================== -->
 
     <section
-      class="section"
+      class="section section-soft"
       id="validation"
     >
 
       <div class="container">
 
-
         <div class="section-header">
 
           <span class="section-index">
-            07
+            04
           </span>
-
 
           <div>
 
-            <p class="overline">
+            <p class="section-kicker">
               VALIDATION
             </p>
 
@@ -674,153 +593,48 @@
         </div>
 
 
+        <div class="two-column">
 
-        <div class="research-layout">
-
-
-          <div class="research-main">
-
+          <article class="text-card">
 
             <h3>
               User insight
             </h3>
 
             <p>
-
               To validate the idea, we interviewed a former sourcing
               manager and CEO with experience working with complex
               supply chains.
-
             </p>
 
+            <p>
+              These insights reinforced the challenge of managing
+              complex supply chains and the need for a clearer
+              overview.
+            </p>
 
+          </article>
+
+
+          <article class="text-card text-card-blue">
 
             <h3>
               IKEA research
             </h3>
 
             <p>
-
               We also reviewed IKEA sustainability reports and
               strategy documents, including the sustainability
               strategy towards 2030.
-
-            </p>
-
-
-            <p>
-
-              These insights reinforced the challenge of managing
-              complex supply chains and the value of providing
-              sourcing employees with a clearer overview.
-
-            </p>
-
-
-          </div>
-
-
-
-          <aside class="research-aside">
-
-            <h3>
-              IKEA sustainability
-            </h3>
-
-            <p>
-
-              One of the goals highlighted in IKEA's sustainability
-              strategy is reducing greenhouse gas emissions.
-
             </p>
 
             <p>
-
-              TextileMap explores how sustainability information
-              could become easier to use as part of everyday
-              sourcing decisions.
-
-            </p>
-
-          </aside>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         SUMMARY
-    ====================================================== -->
-
-    <section class="section section-muted">
-
-      <div class="container">
-
-
-        <div class="section-header">
-
-          <span class="section-index">
-            08
-          </span>
-
-
-          <div>
-
-            <p class="overline">
-              SUMMARY
-            </p>
-
-            <h2>
-              Bringing the information together
-            </h2>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="two-column-text">
-
-
-          <article>
-
-            <p class="intro-text">
-
-              TextileMap helps sourcing managers make more informed
-              decisions by bringing supply-chain and sustainability
-              information together in one clear and accessible
-              dashboard.
-
+              One of the goals highlighted in this strategy is the
+              reduction of greenhouse gas emissions, which is relevant
+              to the type of data TextileMap aims to visualize.
             </p>
 
           </article>
-
-
-
-          <article>
-
-            <p>
-
-              The concept is not about creating new data or replacing
-              existing sourcing expertise.
-
-            </p>
-
-            <p>
-
-              It is about simplifying existing information and making
-              it easier to understand and use.
-
-            </p>
-
-          </article>
-
 
         </div>
 
@@ -841,17 +655,15 @@
 
       <div class="container">
 
-
         <div class="section-header">
 
           <span class="section-index">
-            09
+            05
           </span>
-
 
           <div>
 
-            <p class="overline">
+            <p class="section-kicker">
               TEAM 11
             </p>
 
@@ -864,119 +676,57 @@
         </div>
 
 
+        <div class="team-grid">
 
-        <div class="team-list">
+          <article class="member-card">
+            <strong>Anna</strong>
+            <span>Team member</span>
+          </article>
 
+          <article class="member-card">
+            <strong>Elliot</strong>
+            <span>Team member</span>
+          </article>
 
-          <div>
+          <article class="member-card">
+            <strong>Elias</strong>
+            <span>Team member</span>
+          </article>
 
-            <strong>
-              Anna
-            </strong>
-
-            <span>
-              Team member
-            </span>
-
-          </div>
-
-
-
-          <div>
-
-            <strong>
-              Elliot
-            </strong>
-
-            <span>
-              Team member
-            </span>
-
-          </div>
-
-
-
-          <div>
-
-            <strong>
-              Elias
-            </strong>
-
-            <span>
-              Team member
-            </span>
-
-          </div>
-
-
-
-          <div>
-
-            <strong>
-              Melvin
-            </strong>
-
-            <span>
-              Team member
-            </span>
-
-          </div>
-
+          <article class="member-card">
+            <strong>Melvin</strong>
+            <span>Team member</span>
+          </article>
 
         </div>
 
 
+        <div class="team-info-grid">
 
-        <div class="course-info">
+          <div class="team-info-card team-info-logo">
 
-
-          <div class="chalmers-placeholder">
-
-            <strong>
-              CHALMERS
-            </strong>
-
-            <span>
-              University of Technology
-            </span>
+            <img
+              src="assets/chalmers-logo.png"
+              alt="Chalmers University of Technology"
+              class="team-logo-image"
+            />
 
           </div>
 
 
-
-          <div>
-
-            <span>
-              Course
-            </span>
-
-            <strong>
-              TEK830 Sustainable Digitalization in Practice
-            </strong>
-
+          <div class="team-info-card">
+            <span class="mini-label">COURSE</span>
+            <strong>TEK830 Sustainable Digitalization in Practice</strong>
           </div>
 
 
-
-          <div>
-
-            <span>
-              Project
-            </span>
-
-            <strong>
-              TextileMap
-            </strong>
-
-            <p>
-              Team 11 · 2026
-            </p>
-
+          <div class="team-info-card">
+            <span class="mini-label">PROJECT</span>
+            <strong>TextileMap</strong>
+            <p>Capstone Project · Team 11</p>
           </div>
-
 
         </div>
-
 
       </div>
 
@@ -995,17 +745,15 @@
 
       <div class="container">
 
-
         <div class="section-header light">
 
           <span class="section-index">
-            10
+            06
           </span>
-
 
           <div>
 
-            <p class="overline">
+            <p class="section-kicker">
               SOURCES & REFERENCES
             </p>
 
@@ -1018,126 +766,58 @@
         </div>
 
 
+        <div class="references-list">
 
-        <div class="references">
-
-
-          <div>
-
-            <span>
-              01
-            </span>
-
+          <article class="reference-item">
+            <span>01</span>
             <div>
-
-              <strong>
-                IKEA sustainability reports
-              </strong>
-
+              <strong>IKEA sustainability reports</strong>
               <p>
-
                 Used as background material for understanding
                 sustainability priorities, reporting and the wider
                 sourcing context.
-
               </p>
-
             </div>
+          </article>
 
-          </div>
-
-
-
-          <div>
-
-            <span>
-              02
-            </span>
-
+          <article class="reference-item">
+            <span>02</span>
             <div>
-
-              <strong>
-                IKEA sustainability strategy towards 2030
-              </strong>
-
+              <strong>IKEA sustainability strategy towards 2030</strong>
               <p>
-
-                Used to understand IKEA's sustainability direction,
-                including its work on reducing greenhouse gas emissions.
-
+                Used to understand IKEA’s sustainability direction,
+                including work related to greenhouse gas emissions.
               </p>
-
             </div>
+          </article>
 
-          </div>
-
-
-
-          <div>
-
-            <span>
-              03
-            </span>
-
+          <article class="reference-item">
+            <span>03</span>
             <div>
-
-              <strong>
-                Interview research
-              </strong>
-
+              <strong>Interview research</strong>
               <p>
-
-                Interview with a former sourcing manager and CEO
-                with experience working with complex supply chains.
-
+                Interview with a former sourcing manager and CEO with
+                experience working with complex supply chains.
               </p>
-
             </div>
+          </article>
 
-          </div>
-
-
-
-          <div>
-
-            <span>
-              04
-            </span>
-
+          <article class="reference-item">
+            <span>04</span>
             <div>
-
-              <strong>
-                Sustainable Requirements Framework
-              </strong>
-
+              <strong>Sustainable Requirements Framework</strong>
               <p>
-
                 Course material used to reflect on the sustainability
                 implications of TextileMap.
-
               </p>
-
             </div>
-
-          </div>
-
+          </article>
 
         </div>
-
-
-        <p class="reference-footnote">
-
-          Complete references including author or organization,
-          title, year and URL or DOI will be added as the project
-          progresses.
-
-        </p>
-
 
       </div>
 
     </section>
-
 
   </main>
 
@@ -1147,22 +827,16 @@
        FOOTER
   ====================================================== -->
 
-  <footer>
+  <footer class="site-footer">
 
     <div class="container footer-inner">
 
-      <strong>
-        TextileMap · Team 11
-      </strong>
-
-      <span>
-        Chalmers University of Technology · 2026
-      </span>
+      <strong>TextileMap · Team 11</strong>
+      <span>Chalmers University of Technology · 2026</span>
 
     </div>
 
   </footer>
-
 
 </body>
 
