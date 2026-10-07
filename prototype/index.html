@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TextileMap Prototype</title>
+
+  <link rel="stylesheet" href="prototype.css">
+
+  <!-- Used only to draw the world map -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
+
+  <script src="prototype.js" defer></script>
+</head>
+
+<body>
+
+  <div class="app">
+
+    <!-- ======================================================
+         SIDEBAR
+    ======================================================= -->
+
+    <aside class="sidebar">
+
+      <div class="prototype-brand">
+        <div class="prototype-logo">
+          TM
+        </div>
+
+        <div>
+          <strong>TextileMap</strong>
+          <span>Sourcing dashboard</span>
+        </div>
+      </div>
+
+
+      <nav class="sidebar-nav">
+
+        <button
+          class="nav-item active"
+          data-view="map"
+        >
+          Supply map
+        </button>
+
+        <button
+          class="nav-item"
+          data-view="suppliers"
+        >
+          Suppliers
+        </button>
+
+        <button
+          class="nav-item"
+          data-view="compare"
+        >
+          Compare
+        </button>
+
+      </nav>
+
+
+      <div class="sidebar-footer">
+
+        <span>
+          Team 11
+        </span>
+
+        <span>
+          Prototype
+        </span>
+
+      </div>
+
+    </aside>
+
+
+
+    <!-- ======================================================
+         MAIN CONTENT
+    ======================================================= -->
+
+    <main class="main-content">
+
+
+      <!-- ====================================================
+           MAP VIEW
+      ===================================================== -->
+
+      <section
+        class="view active"
+        id="map-view"
+      >
+
+
+        <header class="page-header">
+
+          <div>
+
+            <span class="page-label">
+              SUPPLY CHAIN OVERVIEW
+            </span>
+
+            <h1>
+              Global textile supplier network
+            </h1>
+
+            <p>
+              Select a supplier on the map to inspect sustainability
+              information and supplier details.
+            </p>
+
+          </div>
+
+
+          <div class="header-controls">
+
+            <select id="supplier-filter">
+
+              <option value="all">
+                All suppliers
+              </option>
+
+              <option value="raw">
+                Raw materials
+              </option>
+
+              <option value="manufacturing">
+                Manufacturing
+              </option>
+
+              <option value="distribution">
+                Distribution
+              </option>
+
+            </select>
+
+          </div>
+
+        </header>
+
+
+
+        <div class="dashboard-grid">
+
+
+          <!-- MAP -->
+
+          <section class="map-card">
+
+            <div class="card-header">
+
+              <div>
+
+                <span class="card-label">
+                  SUPPLIER LOCATION
+                </span>
+
+                <strong>
+                  Global overview
+                </strong>
+
+              </div>
+
+
+              <div class="map-controls">
+
+                <button id="zoom-out">
+                  −
+                </button>
+
+                <button id="reset-map">
+                  Reset
+                </button>
+
+                <button id="zoom-in">
+                  +
+                </button>
+
+              </div>
+
+            </div>
+
+
+
+            <div
+              class="world-map"
+              id="world-map"
+            >
+
+              <svg
+                id="map-svg"
+                viewBox="0 0 900 480"
+                aria-label="World map showing TextileMap suppliers"
+              >
+
+                <g id="map-layer"></g>
+
+                <g id="supplier-markers"></g>
+
+              </svg>
+
+            </div>
+
+
+            <div class="map-legend">
+
+              <span>
+                <i class="legend excellent"></i>
+                Excellent
+              </span>
+
+              <span>
+                <i class="legend good"></i>
+                Good
+              </span>
+
+              <span>
+                <i class="legend moderate"></i>
+                Moderate
+              </span>
+
+              <span>
+                <i class="legend attention"></i>
+                Needs attention
+              </span>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- SELECTED SUPPLIER -->
+
+          <aside
+            class="supplier-panel"
+            id="supplier-panel"
+          >
+
+
+            <div class="supplier-panel-empty">
+
+              <div class="empty-icon">
+                +
+              </div>
+
+              <h2>
+                Select a supplier
+              </h2>
+
+              <p>
+                Click a supplier marker on the map to inspect its
+                sustainability and sourcing information.
+              </p>
+
+            </div>
+
+
+          </aside>
+
+
+        </div>
+
+      </section>
+
+
+
+      <!-- ====================================================
+           SUPPLIER LIST
+      ===================================================== -->
+
+      <section
+        class="view"
+        id="suppliers-view"
+      >
+
+
+        <header class="page-header">
+
+          <div>
+
+            <span class="page-label">
+              SUPPLIERS
+            </span>
+
+            <h1>
+              Supplier overview
+            </h1>
+
+            <p>
+              Summary of the suppliers currently represented in
+              the TextileMap prototype.
+            </p>
+
+          </div>
+
+        </header>
+
+
+
+        <div
+          class="supplier-table-wrapper"
+        >
+
+          <table class="supplier-table">
+
+            <thead>
+
+              <tr>
+
+                <th>
+                  Supplier
+                </th>
+
+                <th>
+                  Country
+                </th>
+
+                <th>
+                  Type
+                </th>
+
+                <th>
+                  Sustainability
+                </th>
+
+                <th>
+                  CO₂
+                </th>
+
+                <th>
+                  Renewable energy
+                </th>
+
+                <th></th>
+
+              </tr>
+
+            </thead>
+
+
+            <tbody id="supplier-table-body">
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+
+      </section>
+
+
+
+      <!-- ====================================================
+           COMPARE VIEW
+      ===================================================== -->
+
+      <section
+        class="view"
+        id="compare-view"
+      >
+
+
+        <header class="page-header">
+
+          <div>
+
+            <span class="page-label">
+              COMPARISON
+            </span>
+
+            <h1>
+              Compare suppliers
+            </h1>
+
+            <p>
+              Compare several indicators rather than relying on a
+              single sustainability score.
+            </p>
+
+          </div>
+
+        </header>
+
+
+
+        <div class="compare-selectors">
+
+
+          <label>
+
+            Supplier A
+
+            <select id="compare-a">
+
+            </select>
+
+          </label>
+
+
+          <label>
+
+            Supplier B
+
+            <select id="compare-b">
+
+            </select>
+
+          </label>
+
+
+        </div>
+
+
+
+        <div
+          class="comparison"
+          id="comparison"
+        >
+
+        </div>
+
+
+      </section>
+
+
+    </main>
+
+  </div>
+
+
+</body>
+</html>
