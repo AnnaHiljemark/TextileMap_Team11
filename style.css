@@ -1,23 +1,18 @@
 /* =========================================================
    TEXTILEMAP — TEAM 11
-   MAIN WEBSITE STYLESHEET
+   MAIN WEBSITE
 ========================================================= */
 
 :root {
   --blue: #0058a3;
-  --blue-dark: #00457f;
-  --blue-light: #eaf2f8;
-
+  --ikea-blue: #003b73;
+  --ikea-blue-dark: #002f5d;
   --yellow: #ffdb00;
 
   --ink: #181d22;
-  --ink-soft: #313941;
-
   --muted: #66717d;
-  --muted-light: #8b949d;
 
   --border: #dde2e6;
-  --border-dark: #3d4851;
 
   --soft: #f5f6f4;
   --soft-blue: #eef4f8;
@@ -41,7 +36,6 @@
 }
 
 
-
 /* =========================================================
    RESET
 ========================================================= */
@@ -60,13 +54,11 @@ body {
 
   font-family:
     "Inter",
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
+    Arial,
+    Helvetica,
     sans-serif;
 
   color: var(--ink);
-
   background: var(--white);
 
   line-height: 1.65;
@@ -95,9 +87,8 @@ img {
 }
 
 
-
 /* =========================================================
-   GENERAL LAYOUT
+   GENERAL
 ========================================================= */
 
 .container {
@@ -123,7 +114,6 @@ img {
 }
 
 
-
 /* =========================================================
    TYPOGRAPHY
 ========================================================= */
@@ -133,10 +123,11 @@ h2,
 h3 {
   font-family:
     "Manrope",
+    Arial,
+    Helvetica,
     sans-serif;
 
   letter-spacing: -0.035em;
-
   line-height: 1.15;
 
   color: inherit;
@@ -172,7 +163,6 @@ h3 {
   margin: 0 0 13px;
 
   font-size: 1.22rem;
-
   font-weight: 700;
 }
 
@@ -188,14 +178,11 @@ p {
   color: var(--blue);
 
   font-size: 0.7rem;
-
   font-weight: 700;
 
   letter-spacing: 0.14em;
-
   line-height: 1.3;
 }
-
 
 
 /* =========================================================
@@ -209,22 +196,19 @@ p {
 
   z-index: 1000;
 
+  background: var(--ikea-blue);
+
   border-bottom:
     1px solid
-    rgba(221, 226, 230, 0.85);
+    rgba(255, 255, 255, 0.08);
 
-  background:
-    rgba(255, 255, 255, 0.93);
-
-  backdrop-filter:
-    blur(14px);
-
-  -webkit-backdrop-filter:
-    blur(14px);
+  box-shadow:
+    0 2px 12px
+    rgba(0, 0, 0, 0.08);
 }
 
 .header-inner {
-  min-height: 72px;
+  min-height: 78px;
 
   display: flex;
 
@@ -235,48 +219,66 @@ p {
   gap: 34px;
 }
 
+
+/* =========================================================
+   TEXTILE MAP LOGO
+========================================================= */
+
 .brand {
   flex-shrink: 0;
 
   font-family:
-    "Manrope",
+    Arial,
+    Helvetica,
     sans-serif;
 
-  font-size: 1.08rem;
+  color: #ffffff;
 
-  font-weight: 700;
+  font-size: 1.05rem;
 
-  letter-spacing: -0.025em;
+  font-weight: 800;
+
+  letter-spacing: 0.11em;
+
+  text-transform: uppercase;
 }
 
 .brand span {
-  margin-left: 8px;
+  margin-left: 12px;
 
-  color: var(--muted);
+  color: var(--yellow);
 
-  font-size: 0.72rem;
+  font-size: 0.65rem;
 
-  font-weight: 600;
+  font-weight: 700;
 
-  letter-spacing: 0;
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
 }
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
 
 .main-nav {
   display: flex;
 
   align-items: center;
 
-  gap: 25px;
+  gap: 27px;
 }
 
 .main-nav a {
   position: relative;
 
-  padding: 26px 0;
+  padding: 28px 0;
 
-  color: #4b5660;
+  color:
+    rgba(255, 255, 255, 0.76);
 
-  font-size: 0.78rem;
+  font-size: 0.76rem;
 
   font-weight: 600;
 
@@ -290,14 +292,13 @@ p {
   position: absolute;
 
   left: 0;
-
   right: 0;
 
-  bottom: 18px;
+  bottom: 20px;
 
   height: 2px;
 
-  background: var(--blue);
+  background: var(--yellow);
 
   transform: scaleX(0);
 
@@ -309,13 +310,18 @@ p {
 
 .main-nav a:hover,
 .main-nav a.active {
-  color: var(--blue);
+  color: #ffffff;
 }
 
 .main-nav a:hover::after,
 .main-nav a.active::after {
   transform: scaleX(1);
 }
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
 
 .menu-button {
   display: none;
@@ -331,18 +337,16 @@ p {
   display: block;
 
   width: 24px;
-
   height: 2px;
 
   margin: 5px;
 
-  background: var(--ink);
+  background: #ffffff;
 }
 
 
-
 /* =========================================================
-   INTRO
+   HERO
 ========================================================= */
 
 .intro {
@@ -425,7 +429,6 @@ p {
 }
 
 
-
 /* =========================================================
    SECTION HEADERS
 ========================================================= */
@@ -454,7 +457,10 @@ p {
     tabular-nums;
 }
 
-.section-header.light .section-index,
+.section-header.light .section-index {
+  color: var(--yellow);
+}
+
 .section-dark .overline {
   color: var(--yellow);
 }
@@ -474,9 +480,8 @@ p {
 }
 
 
-
 /* =========================================================
-   OVERVIEW
+   TWO COLUMN TEXT
 ========================================================= */
 
 .two-column-text {
@@ -492,128 +497,67 @@ p {
   max-width: 510px;
 }
 
-.two-column-text p:last-child {
+.two-column-text article p:last-child {
   margin-bottom: 0;
 }
-
-.info-table {
-  margin-top: 56px;
-
-  border-top:
-    1px solid
-    var(--border);
-}
-
-.info-row {
-  display: grid;
-
-  grid-template-columns:
-    210px 1fr;
-
-  gap: 34px;
-
-  padding:
-    18px 0;
-
-  border-bottom:
-    1px solid
-    var(--border);
-}
-
-.info-row span {
-  color: var(--ink);
-
-  font-size: 0.84rem;
-
-  font-weight: 600;
-}
-
-.info-row p {
-  margin: 0;
-
-  max-width: 780px;
-}
-
 
 
 /* =========================================================
-   RESEARCH
+   INFORMATION CARDS
 ========================================================= */
 
-.research-layout {
+.risk-list {
   display: grid;
 
   grid-template-columns:
-    minmax(0, 1.12fr)
-    minmax(280px, 0.88fr);
+    1fr 1fr;
 
-  gap: 80px;
+  gap: 18px;
 }
 
-.research-main {
-  max-width: 670px;
-}
+.risk-list article {
+  min-height: 185px;
 
-.research-main h3:not(:first-child) {
-  margin-top: 40px;
-}
-
-.research-main p:last-child {
-  margin-bottom: 0;
-}
-
-.research-aside {
-  align-self: start;
-
-  padding:
-    28px 30px;
+  padding: 30px;
 
   border:
     1px solid
-    #d8dfe4;
-
-  border-top:
-    4px solid
-    var(--blue);
+    var(--border);
 
   border-radius:
-    0 0
-    var(--radius-medium)
     var(--radius-medium);
 
-  background: #ffffff;
+  background:
+    #ffffff;
+
+  box-shadow:
+    var(--shadow-small);
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
 }
 
-.research-aside h3 {
-  margin-bottom: 18px;
+.risk-list article:hover {
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 12px 30px
+    rgba(24, 35, 44, 0.08);
 }
 
-.research-aside ul {
+.risk-list h3 {
+  margin-bottom: 10px;
+}
+
+.risk-list article p {
   margin: 0;
-
-  padding-left: 18px;
 }
-
-.research-aside li {
-  margin-bottom: 12px;
-
-  padding-left: 3px;
-
-  color: var(--muted);
-
-  font-size: 0.88rem;
-
-  line-height: 1.55;
-}
-
-.research-aside li:last-child {
-  margin-bottom: 0;
-}
-
 
 
 /* =========================================================
-   EMBEDDED REAL PROTOTYPE
+   PROTOTYPE
 ========================================================= */
 
 .prototype-embed-wrapper {
@@ -672,7 +616,6 @@ p {
 
 .prototype-browser-dots span {
   width: 9px;
-
   height: 9px;
 
   border-radius: 50%;
@@ -796,56 +739,6 @@ p {
     translateY(-1px);
 }
 
-
-
-/* =========================================================
-   PROTOTYPE FEATURE LIST
-========================================================= */
-
-.feature-list {
-  margin-top: 58px;
-
-  border-top:
-    1px solid
-    var(--border);
-}
-
-.feature-row {
-  display: grid;
-
-  grid-template-columns:
-    58px 1fr;
-
-  gap: 24px;
-
-  padding:
-    24px 0;
-
-  border-bottom:
-    1px solid
-    var(--border);
-}
-
-.feature-row > span {
-  padding-top: 3px;
-
-  color: var(--blue);
-
-  font-size: 0.7rem;
-
-  font-weight: 700;
-}
-
-.feature-row h3 {
-  margin-bottom: 7px;
-}
-
-.feature-row p {
-  max-width: 830px;
-
-  margin-bottom: 0;
-}
-
 .prototype-warning {
   margin-top: 34px;
 
@@ -878,17 +771,19 @@ p {
 .prototype-warning p {
   margin: 0;
 
-  color: #655c40;
+  color:
+    #655c40;
 
-  font-size: 0.83rem;
+  font-size:
+    0.83rem;
 
-  line-height: 1.6;
+  line-height:
+    1.6;
 }
 
 
-
 /* =========================================================
-   DESIGN THINKING
+   IMPACT
 ========================================================= */
 
 .dt-grid {
@@ -915,8 +810,7 @@ p {
 .dt-grid article {
   min-height: 340px;
 
-  padding:
-    31px;
+  padding: 31px;
 
   background:
     var(--dark);
@@ -925,11 +819,9 @@ p {
 .dt-label {
   display: block;
 
-  margin-bottom:
-    32px;
+  margin-bottom: 32px;
 
-  color:
-    var(--yellow);
+  color: var(--yellow);
 
   font-size:
     0.68rem;
@@ -950,250 +842,61 @@ p {
 }
 
 
-
 /* =========================================================
-   SUSTAINABILITY
+   VALIDATION
 ========================================================= */
 
-.sustainability-table {
+.research-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.12fr)
+    minmax(280px, 0.88fr);
+
+  gap: 80px;
+}
+
+.research-main {
+  max-width: 670px;
+}
+
+.research-main h3:not(:first-child) {
+  margin-top: 40px;
+}
+
+.research-main p:last-child {
+  margin-bottom: 0;
+}
+
+.research-aside {
+  align-self: start;
+
+  padding:
+    28px 30px;
+
+  border:
+    1px solid
+    #d8dfe4;
+
   border-top:
-    1px solid
-    var(--border);
-}
-
-.sustainability-table article {
-  display: grid;
-
-  grid-template-columns:
-    165px 1fr 235px;
-
-  gap: 38px;
-
-  align-items: start;
-
-  padding:
-    25px 0;
-
-  border-bottom:
-    1px solid
-    var(--border);
-}
-
-.sustainability-table article h3,
-.sustainability-table article p {
-  margin: 0;
-}
-
-.sustainability-table article span {
-  color:
+    4px solid
     var(--blue);
-
-  font-size:
-    0.72rem;
-
-  font-weight:
-    600;
-
-  line-height:
-    1.55;
-}
-
-
-
-/* =========================================================
-   EFFECTS
-========================================================= */
-
-.effects-block {
-  margin-top:
-    64px;
-}
-
-.effects-block > h3 {
-  margin-bottom:
-    22px;
-}
-
-.effects {
-  display: grid;
-
-  grid-template-columns:
-    1fr 42px 1fr 42px 1fr;
-
-  gap: 10px;
-
-  align-items: center;
-}
-
-.effects > div:not(.arrow) {
-  min-height:
-    160px;
-
-  padding:
-    23px;
-
-  border:
-    1px solid
-    var(--border);
 
   border-radius:
+    0 0
+    var(--radius-medium)
     var(--radius-medium);
 
-  background:
-    #ffffff;
+  background: #ffffff;
 }
 
-.effects span {
-  display: block;
-
-  margin-bottom:
-    10px;
-
-  color:
-    var(--blue);
-
-  font-size:
-    0.68rem;
-
-  font-weight:
-    700;
-
-  letter-spacing:
-    0.04em;
+.research-aside h3 {
+  margin-bottom: 18px;
 }
 
-.effects p {
-  margin: 0;
-
-  font-size:
-    0.85rem;
-
-  line-height:
-    1.6;
+.research-aside p:last-child {
+  margin-bottom: 0;
 }
-
-.arrow {
-  text-align:
-    center;
-
-  color:
-    var(--blue);
-
-  font-size:
-    1.3rem;
-}
-
-
-
-/* =========================================================
-   DIAGRAMS
-========================================================= */
-
-.diagram-grid {
-  display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap: 18px;
-
-  margin-top:
-    30px;
-}
-
-.diagram-box {
-  min-height:
-    220px;
-
-  display: flex;
-
-  flex-direction:
-    column;
-
-  justify-content:
-    center;
-
-  padding:
-    30px;
-
-  border:
-    1.5px dashed
-    #bec7ce;
-
-  border-radius:
-    var(--radius-medium);
-
-  background:
-    #fafbfb;
-}
-
-.diagram-box > span {
-  margin-bottom:
-    12px;
-
-  color:
-    var(--blue);
-
-  font-size:
-    0.64rem;
-
-  font-weight:
-    700;
-
-  letter-spacing:
-    0.1em;
-}
-
-.diagram-box p {
-  margin: 0;
-}
-
-
-
-/* =========================================================
-   RISKS
-========================================================= */
-
-.risk-list {
-  display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap:
-    18px;
-}
-
-.risk-list article {
-  min-height:
-    185px;
-
-  padding:
-    28px;
-
-  border:
-    1px solid
-    var(--border);
-
-  border-radius:
-    var(--radius-medium);
-
-  background:
-    #ffffff;
-
-  box-shadow:
-    var(--shadow-small);
-}
-
-.risk-list h3 {
-  margin-bottom:
-    10px;
-}
-
-.risk-list article p {
-  margin: 0;
-}
-
 
 
 /* =========================================================
@@ -1222,18 +925,17 @@ p {
 
   display: flex;
 
-  flex-direction:
-    column;
+  flex-direction: column;
 
-  justify-content:
-    flex-end;
+  justify-content: flex-end;
 
-  padding:
-    23px;
+  padding: 23px;
 
   border-right:
     1px solid
     var(--border);
+
+  background: #ffffff;
 }
 
 .team-list > div:last-child {
@@ -1252,14 +954,11 @@ p {
 }
 
 .team-list span {
-  margin-top:
-    4px;
+  margin-top: 4px;
 
-  color:
-    var(--muted);
+  color: var(--muted);
 
-  font-size:
-    0.75rem;
+  font-size: 0.75rem;
 }
 
 .course-info {
@@ -1268,19 +967,15 @@ p {
   grid-template-columns:
     repeat(3, 1fr);
 
-  gap:
-    18px;
+  gap: 18px;
 
-  margin-top:
-    24px;
+  margin-top: 24px;
 }
 
 .course-info > div {
-  min-height:
-    135px;
+  min-height: 135px;
 
-  padding:
-    24px;
+  padding: 24px;
 
   border:
     1px solid
@@ -1290,20 +985,17 @@ p {
     var(--radius-medium);
 
   background:
-    var(--soft);
+    #ffffff;
 }
 
 .course-info > div > span {
   display: block;
 
-  margin-bottom:
-    6px;
+  margin-bottom: 6px;
 
-  color:
-    var(--muted);
+  color: var(--muted);
 
-  font-size:
-    0.68rem;
+  font-size: 0.68rem;
 }
 
 .course-info p {
@@ -1324,13 +1016,8 @@ p {
     "Manrope",
     sans-serif;
 
-  font-size:
-    1.25rem;
-
-  letter-spacing:
-    -0.04em;
+  font-size: 1.25rem;
 }
-
 
 
 /* =========================================================
@@ -1349,8 +1036,7 @@ p {
   grid-template-columns:
     58px 1fr;
 
-  gap:
-    20px;
+  gap: 20px;
 
   padding:
     21px 0;
@@ -1374,31 +1060,33 @@ p {
 .references strong {
   display: block;
 
-  margin-bottom:
-    4px;
+  margin-bottom: 4px;
+
+  color: #ffffff;
 }
 
 .references p {
   margin: 0;
 
-  max-width:
-    800px;
+  max-width: 800px;
 
-  font-size:
-    0.85rem;
+  color: #bcc4ca;
+
+  font-size: 0.85rem;
 }
 
 .reference-footnote {
-  max-width:
-    760px;
+  max-width: 760px;
 
   margin:
     28px 0 0;
 
+  color:
+    #8f9aa2;
+
   font-size:
     0.79rem;
 }
-
 
 
 /* =========================================================
@@ -1421,17 +1109,13 @@ footer {
   min-height:
     90px;
 
-  display:
-    flex;
+  display: flex;
 
-  align-items:
-    center;
+  align-items: center;
 
-  justify-content:
-    space-between;
+  justify-content: space-between;
 
-  gap:
-    20px;
+  gap: 20px;
 
   font-size:
     0.74rem;
@@ -1443,7 +1127,6 @@ footer {
 }
 
 
-
 /* =========================================================
    TABLET
 ========================================================= */
@@ -1451,68 +1134,57 @@ footer {
 @media (max-width: 960px) {
 
   .menu-button {
-    display:
-      block;
+    display: block;
   }
 
   .main-nav {
-    position:
-      absolute;
+    position: absolute;
 
-    top:
-      66px;
+    top: 68px;
 
-    left:
-      20px;
+    left: 20px;
+    right: 20px;
 
-    right:
-      20px;
+    display: none;
 
-    display:
-      none;
+    flex-direction: column;
 
-    flex-direction:
-      column;
+    align-items: stretch;
 
-    align-items:
-      stretch;
+    gap: 0;
 
-    gap:
-      0;
+    overflow: hidden;
 
-    overflow:
-      hidden;
-
-    padding:
-      8px;
+    padding: 8px;
 
     border:
       1px solid
-      var(--border);
+      rgba(255, 255, 255, 0.12);
 
     border-radius:
       var(--radius-medium);
 
     background:
-      #ffffff;
+      var(--ikea-blue);
 
     box-shadow:
       var(--shadow-medium);
   }
 
   .main-nav.open {
-    display:
-      flex;
+    display: flex;
   }
 
   .main-nav a {
     padding:
-      11px 12px;
+      12px 14px;
+
+    color:
+      rgba(255, 255, 255, 0.8);
   }
 
   .main-nav a::after {
-    display:
-      none;
+    display: none;
   }
 
   .intro-grid,
@@ -1523,53 +1195,27 @@ footer {
   }
 
   .intro-grid {
-    gap:
-      55px;
+    gap: 55px;
   }
 
   .two-column-text {
-    gap:
-      42px;
+    gap: 42px;
   }
 
   .research-layout {
-    gap:
-      45px;
+    gap: 45px;
   }
 
   .section-lead {
-    margin-left:
-      0;
+    margin-left: 0;
   }
 
   .dt-grid {
-    grid-template-columns:
-      1fr;
+    grid-template-columns: 1fr;
   }
 
   .dt-grid article {
-    min-height:
-      auto;
-  }
-
-  .sustainability-table article {
-    grid-template-columns:
-      140px 1fr;
-  }
-
-  .sustainability-table article span {
-    grid-column:
-      2;
-  }
-
-  .effects {
-    grid-template-columns:
-      1fr;
-  }
-
-  .arrow {
-    transform:
-      rotate(90deg);
+    min-height: auto;
   }
 
   .team-list {
@@ -1578,8 +1224,7 @@ footer {
   }
 
   .team-list > div:nth-child(2) {
-    border-right:
-      0;
+    border-right: 0;
   }
 
   .team-list > div:nth-child(-n + 2) {
@@ -1589,12 +1234,10 @@ footer {
   }
 
   .course-info {
-    grid-template-columns:
-      1fr;
+    grid-template-columns: 1fr;
   }
 
 }
-
 
 
 /* =========================================================
@@ -1609,6 +1252,21 @@ footer {
         calc(100% - 28px),
         var(--max)
       );
+  }
+
+  .header-inner {
+    min-height: 70px;
+  }
+
+  .brand {
+    font-size: 0.92rem;
+
+    letter-spacing:
+      0.09em;
+  }
+
+  .brand span {
+    display: none;
   }
 
   .intro {
@@ -1635,24 +1293,19 @@ footer {
     grid-template-columns:
       1fr;
 
-    gap:
-      7px;
+    gap: 7px;
 
     margin-bottom:
       38px;
   }
 
   .section-index {
-    padding-top:
-      0;
+    padding-top: 0;
   }
 
-  .info-row {
+  .risk-list {
     grid-template-columns:
       1fr;
-
-    gap:
-      6px;
   }
 
   .prototype-browser-bar {
@@ -1686,21 +1339,13 @@ footer {
       column;
   }
 
-  .feature-row {
-    grid-template-columns:
-      42px 1fr;
-  }
-
-  .risk-list,
-  .diagram-grid,
   .team-list {
     grid-template-columns:
       1fr;
   }
 
   .team-list > div {
-    border-right:
-      0;
+    border-right: 0;
 
     border-bottom:
       1px solid
@@ -1708,21 +1353,7 @@ footer {
   }
 
   .team-list > div:last-child {
-    border-bottom:
-      0;
-  }
-
-  .sustainability-table article {
-    grid-template-columns:
-      1fr;
-
-    gap:
-      12px;
-  }
-
-  .sustainability-table article span {
-    grid-column:
-      1;
+    border-bottom: 0;
   }
 
   .footer-inner {
