@@ -958,3 +958,82 @@ p {
   }
 
 }
+/* =========================================================
+   TEAM PROFILE PHOTOS
+========================================================= */
+
+.member-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 34px 22px;
+
+  text-align: center;
+}
+
+.member-avatar {
+  position: relative;
+
+  width: 120px;
+  height: 120px;
+
+  margin-bottom: 22px;
+
+  display: grid;
+  place-items: center;
+
+  overflow: hidden;
+
+  border: 3px solid var(--ikea-blue);
+  border-radius: 50%;
+
+  background: var(--ikea-blue-soft);
+}
+
+.member-avatar img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 2;
+}
+
+.avatar-placeholder {
+  color: var(--ikea-blue);
+
+  font-family: "Manrope", sans-serif;
+  font-size: 1.9rem;
+  font-weight: 800;
+}
+
+.member-card strong {
+  margin-bottom: 8px;
+
+  color: var(--ikea-blue);
+
+  font-size: 1.12rem;
+}
+
+.member-cid {
+  margin-bottom: 6px;
+
+  color: var(--muted);
+
+  font-size: 0.78rem;
+}
+
+.member-email {
+  color: var(--ikea-blue-2);
+
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.member-email:hover {
+  text-decoration: underline;
+}
