@@ -564,6 +564,16 @@ p {
   text-transform: uppercase;
 }
 
+.impact-diagram-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.impact-diagram-image {
+  width: 78%;
+  max-width: 900px;
+}
+
 
 /* =========================================================
    TEAM
@@ -758,6 +768,10 @@ p {
   .team-grid,
   .team-info-grid {
     grid-template-columns: 1fr;
+  }
+
+  .impact-diagram-image {
+    width: 100%;
   }
 
   .hero-copy {
