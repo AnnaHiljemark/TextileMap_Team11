@@ -537,13 +537,21 @@ p {
 }
 
 .sustainability-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 18px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .sustainability-card {
   border-top: 5px solid var(--ikea-yellow);
+}
+
+.dimension-text {
+  margin: 0;
+  color: var(--muted);
 }
 
 .tab-card-label {
@@ -633,15 +641,24 @@ p {
 ========================================================= */
 
 .references-list {
-  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+#references {
+  padding: 64px 0;
+}
+
+#references .section-header {
+  margin-bottom: 28px;
 }
 
 .reference-item {
   display: grid;
-  grid-template-columns: 56px 1fr;
-  gap: 18px;
-  padding: 20px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  grid-template-columns: 40px 1fr;
+  gap: 12px;
+  padding: 0;
 }
 
 .reference-item > span {
@@ -650,15 +667,29 @@ p {
   font-weight: 800;
 }
 
-.reference-item strong {
+.reference-item strong,
+.reference-link {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
   color: var(--white);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.reference-link {
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 219, 0, 0.7);
+  text-underline-offset: 3px;
+}
+
+.reference-link:hover {
+  color: var(--ikea-yellow);
 }
 
 .reference-item p {
   margin: 0;
   color: rgba(255, 255, 255, 0.78);
+  font-size: 0.82rem;
 }
 
 
@@ -726,10 +757,6 @@ p {
   .tab-card-grid,
   .team-grid,
   .team-info-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .sustainability-grid {
     grid-template-columns: 1fr;
   }
 
