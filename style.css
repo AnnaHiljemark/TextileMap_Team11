@@ -708,8 +708,7 @@ p {
 ========================================================= */
 
 .presentation-link-section {
-  padding: 0 0 64px;
-  background: var(--bg);
+  padding-top: 0;
 }
 
 .presentation-link-card {
@@ -719,14 +718,10 @@ p {
   gap: 32px;
   padding: 28px 32px;
   border: 1px solid var(--border);
-  border-left: 5px solid var(--ikea-yellow);
+  border-left: 5px solid var(--ikea-blue-2);
   border-radius: var(--radius-m);
   background: var(--white);
   box-shadow: var(--shadow-s);
-}
-
-.presentation-link-card .section-kicker {
-  margin-bottom: 8px;
 }
 
 .presentation-link-card h2 {
